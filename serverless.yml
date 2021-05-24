@@ -31,6 +31,7 @@ provider:
         - cloudwatch:GetMetricStatistics
         - cloudwatch:ListMetrics
       Resource: "*"
+
 functions:
   create:
     handler: todos/create.create
@@ -71,9 +72,9 @@ functions:
           path: todos/{id}
           method: delete
           cors: true
-          
+  
   translate:
-    handler: todos/translate.get
+    handler: todos/getTranslate.get
     events:
       - http:
           path: todos/{id}/{lang}
