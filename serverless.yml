@@ -63,10 +63,10 @@ functions:
           cors: true
           
   translate:
-    handler: todos/translate.translate
+    handler: todos/translate.handler_translate
     events:
       - http:
-          path: todos
+          path: todos/{id}/{language}
           method: get
           cors: true
 
